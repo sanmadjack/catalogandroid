@@ -30,6 +30,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ObjectListActivity" />
         </activity>
+        <activity
+            android:name="org.sanmadjack.catalog.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="org.sanmadjack.catalog.FieldEditActivity"
+            android:label="@string/title_activity_field_edit" >
+        </activity>
     </application>
 
 </manifest>

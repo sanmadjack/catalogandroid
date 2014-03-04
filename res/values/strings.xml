@@ -3,5 +3,13 @@
 
     <string name="app_name">Catalog</string>
     <string name="title_object_detail">Object Detail</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_field_edit">FieldEditActivity</string>
+    <string name="name">Name</string>
+    <string name="display_name">Display Name</string>
+    <string name="data_type">Data Type</string>
+    <string name="format_mask">Format Mask</string>
 
 </resources>

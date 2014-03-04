@@ -2,6 +2,8 @@ package org.sanmadjack.catalog.model;
 
 
 public abstract class AModelItem<T> {
+	public long id = -1;
+	
 	protected Model model;
 	
 	public static final String ID_FIELD_NAME = "id";
@@ -9,15 +11,26 @@ public abstract class AModelItem<T> {
 	
 	public static final int NAME_MAX_LENGTH = 20;
 
-	
+
 	public AModelItem(Model model) {
 		this.model = model;
 	}
+
+	public AModelItem(Model model, long id) {
+		this.model = model;
+		this.Load(id);
+	}
+
+	public void Save() throws ValidationException {
+		this.ValidateFields();
+		this.SaveInternal();
+	}
 	
-	public abstract T Create();
+	protected abstract void ValidateFields() throws ValidationException;
 	
-	public abstract void Request();
+	protected abstract void  SaveInternal(); 
 	
-	public abstract void Update();
+	protected abstract void Load(long id);
+	
 
 }
